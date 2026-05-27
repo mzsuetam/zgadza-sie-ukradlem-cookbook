@@ -3,7 +3,10 @@ name: Compile Cookbook
 on:
   push:
     branches:
-      - main  # Adjust if your default branch is named master
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build_cookbook:
@@ -12,39 +15,38 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc and Weasyprint/LaTeX
+      - name: Install Pandoc and LaTeX (with Polish Language Support)
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-recommended texlive-xetex texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+          sudo apt-get install -y pandoc \
+            texlive-latex-recommended \
+            texlive-xetex \
+            texlive-fonts-recommended \
+            texlive-extra-utils \
+            texlive-latex-extra \
+            texlive-lang-polish  # <--- Added this to fix the babel error
 
       - name: Compile Cookbook PDF
         run: |
-          # 1. Dynamically find all markdown files in the correct alphabetical order
-          # This ensures 1-dania-glowne/0-section.md comes before 1-dania-glowne/pizza.md
-          # and so on across all folders.
-          MAP_FILES=$(find . -name "*.md" | sort)
+          # Find all markdown files, sort them, but explicitly filter out the README.md
+          MAP_FILES=$(find . -name "*.md" ! -name "README.md" | sort)
           
           echo "Files to compile:"
           echo "$MAP_FILES"
           
-          # 2. Run Pandoc combining the conf.yaml and all the discovered markdown files
-          # Using xelatex as the pdf-engine handles Polish diacritics flawlessly.
-          pandoc conf.yaml $MAP_FILES -o output.pdf --pdf-engine=xelatex
+          # Run Pandoc
+          pandoc conf.yaml $MAP_FILES -o zgadza-sie-ukradlem-cookbook.pdf --pdf-engine=xelatex
 
-      - name: Get current date and rename PDF
+      - name: Generate Date and Tag Context
         run: |
-          # Get current date in YYMMDD format
-          CURRENT_DATE=$(date +'%y%m%d')
-          
-          # Rename output to your specific naming convention
-          NEW_NAME="zgadza-sie-ukradlem-cookbook-${CURRENT_DATE}.pdf"
-          mv output.pdf "$NEW_NAME"
-          
-          # Save to env for the upload step
-          echo "FINAL_PDF_NAME=$NEW_NAME" >> $GITHUB_ENV
+          echo "RELEASE_TAG=v$(date +'%y.%m.%d')" >> $GITHUB_ENV
+          echo "RELEASE_TITLE=Wydanie z dnia $(date +'%d.%m.%Y')" >> $GITHUB_ENV
 
-      - name: Upload PDF Artifact
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
         with:
-          name: compiled-cookbook-pdf
-          path: ${{ env.FINAL_PDF_NAME }}
+          allowUpdates: true
+          tag: ${{ env.RELEASE_TAG }}
+          name: ${{ env.RELEASE_TITLE }}
+          body: "Automatyczna kompilacja książki kucharskiej na podstawie najnowszych zmian w repozytorium."
+          artifacts: "zgadza-sie-ukradlem-cookbook.pdf"

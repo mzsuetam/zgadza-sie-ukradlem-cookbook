@@ -1,6 +1,8 @@
 
 # Gofry z serka wiejskiego (z płatkami owsianymi)
 
+![Gofry z serka wiejskiego](../img/gofry.png)
+
 ## Składniki na ciasto gofrowe
 
 * serek wiejski (np. wysokobiałkowy) – 1 opakowanie (200 g)
