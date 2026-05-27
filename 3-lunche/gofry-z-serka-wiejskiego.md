@@ -1,7 +1,7 @@
 
 # Gofry z serka wiejskiego (z płatkami owsianymi)
 
-![Gofry z serka wiejskiego](../img/gofry.png)
+![Gofry z serka wiejskiego](img/gofry.png)
 
 ## Składniki na ciasto gofrowe
 
