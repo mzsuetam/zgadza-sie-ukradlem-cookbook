@@ -1,6 +1,6 @@
 ## Kurczak po chińsku w sosie sweet chili
 
-![Kurczak po chińsku](https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/kurczak-po-chinsku.jpg)
+![Kurczak po chińsku](img/kurczak-po-chinsku.jpg)
 
 ### Opis
 

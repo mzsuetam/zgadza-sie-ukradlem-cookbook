@@ -1,6 +1,6 @@
 ## Sajgonki
 
-![Sajgonki przed upieczeniem](https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/sajgonki_przepis.jpg)
+![Sajgonki przed upieczeniem](img/sajgonki.jpg)
 
 ### Opis
 

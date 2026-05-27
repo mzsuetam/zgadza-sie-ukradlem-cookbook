@@ -85,6 +85,3 @@ Zwinąć nori, zmoczyć całą rolkę
 pokroić na 8
 
 Uzywanie bazooki: https://www.youtube.com/watch?v=_XNmQIq55_8 (dodać QR)
-
----
-

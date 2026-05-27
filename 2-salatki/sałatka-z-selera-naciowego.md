@@ -1,6 +1,6 @@
 ## Sałatka z selera naciowego
 
-![Sałatka z selera naciowego](https://staticsmaker.iplsc.com/smaker_prod_2018_03_13/d1934afa48869906857db7c431b443bb-lg.jpg)
+![Sałatka z selera naciowego](img/sałatka-seler-naciowy.jpg)
 
 ### Składniki
 

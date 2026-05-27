@@ -35,7 +35,7 @@ jobs:
           echo "$MAP_FILES"
           
           # Run Pandoc
-          pandoc conf.yaml $MAP_FILES -o zgadza-sie-ukradlem-cookbook.pdf --pdf-engine=xelatex --net-fetch
+          pandoc conf.yaml $MAP_FILES -o zgadza-sie-ukradlem-cookbook.pdf --pdf-engine=xelatex
 
       - name: Generate Date and Tag Context
         run: |

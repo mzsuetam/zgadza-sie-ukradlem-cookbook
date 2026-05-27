@@ -1,6 +1,6 @@
 ## Sałatka gyros
 
-![Sałatka gyros](https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/salatka_gyros.jpg)
+![Sałatka gyros](img/salatka-gyros.jpg)
 
 ### Składniki
 

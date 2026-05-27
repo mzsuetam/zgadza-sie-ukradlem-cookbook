@@ -1,6 +1,6 @@
 ## Krewetki z patelni z czosnkiem, natką pietruszki i chili
 
-![Krewetki z patelni z czosnkiem, natką pietruszki i chili](https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/zdjecie_glowne/public/krewetki_z_patelni_1.jpg)
+![Krewetki z patelni z czosnkiem, natką pietruszki i chili](img/krewetki.png)
 
 ### Składniki
 
