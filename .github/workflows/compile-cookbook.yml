@@ -1,0 +1,50 @@
+name: Compile Cookbook
+
+on:
+  push:
+    branches:
+      - main  # Adjust if your default branch is named master
+
+jobs:
+  build_cookbook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and Weasyprint/LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-recommended texlive-xetex texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+
+      - name: Compile Cookbook PDF
+        run: |
+          # 1. Dynamically find all markdown files in the correct alphabetical order
+          # This ensures 1-dania-glowne/0-section.md comes before 1-dania-glowne/pizza.md
+          # and so on across all folders.
+          MAP_FILES=$(find . -name "*.md" | sort)
+          
+          echo "Files to compile:"
+          echo "$MAP_FILES"
+          
+          # 2. Run Pandoc combining the conf.yaml and all the discovered markdown files
+          # Using xelatex as the pdf-engine handles Polish diacritics flawlessly.
+          pandoc conf.yaml $MAP_FILES -o output.pdf --pdf-engine=xelatex
+
+      - name: Get current date and rename PDF
+        run: |
+          # Get current date in YYMMDD format
+          CURRENT_DATE=$(date +'%y%m%d')
+          
+          # Rename output to your specific naming convention
+          NEW_NAME="zgadza-sie-ukradlem-cookbook-${CURRENT_DATE}.pdf"
+          mv output.pdf "$NEW_NAME"
+          
+          # Save to env for the upload step
+          echo "FINAL_PDF_NAME=$NEW_NAME" >> $GITHUB_ENV
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-cookbook-pdf
+          path: ${{ env.FINAL_PDF_NAME }}

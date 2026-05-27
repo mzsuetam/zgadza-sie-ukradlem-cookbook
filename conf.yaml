@@ -1,0 +1,39 @@
+---
+title: |
+  ![](maciek-co-gotujesz.png){width=8cm} \
+  \
+  Książka kucharska \
+  "Zgadza się, ukradłem" 
+subtitle: |
+  ... ale tylko frajer by nie skorzystał. \
+  Trzeba było pilnować.
+author:
+  - 'Złożyli: Mateusz Mazur, Joanna Luberda'
+abstract: '"Mmm, ale pięknie pachnie! Maciek, co gotujesz?" wybrzmiało pytanie. "Wodę" odpowiedział Maciek. Historie takie jak ta od zawsze zachęcają do rozpoczęcia przygody z gotowaniem. Anthony Bourdain, znany kucharz i podróżnik, zmarł w 2018 roku z własnej ręki. Teraz to nasza kolej aby zgłębić tajniki gotowania.'
+papersize: b5
+fontsize: 12pt
+links-as-notes: true
+header-includes:
+  - \usepackage[polish]{babel}
+  - \usepackage[utf8]{inputenc}
+  - \usepackage[margin=2cm]{geometry}
+  - \usepackage{graphicx}
+  - \usepackage[export]{adjustbox}
+  - \setkeys{Gin}{width=0.7\textwidth}
+  - \usepackage{setspace}
+  # - \onehalfspacing
+  - \usepackage{titlesec}
+  - \titleformat{\section}[block]{\newpage\large\bfseries}{\thesection}{1em}{}
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyfoot{}
+  - \fancyhead{}
+  - \fancyhead[L]{ \nouppercase{\leftmark} }
+  - \fancyhead[R]{ \rightmark }
+  - \fancyfoot[C]{\thepage}
+  - \renewcommand{\headruleskip}{2mm}
+  - \setlength{\headheight}{21pt}
+  - \usepackage{rotating}
+  - \newcommand{\bsidewaysfigure}{\begin{sidewaysfigure}[h!]}
+  - \newcommand{\esidewaysfigure}{\end{sidewaysfigure}}
+---
