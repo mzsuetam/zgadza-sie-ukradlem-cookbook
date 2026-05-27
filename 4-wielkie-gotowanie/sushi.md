@@ -1,7 +1,7 @@
 <!--
 ## Kurczak po chińsku w sosie sweet chili
 
-![Kurczak po chińsku](https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/kurczak-po-chinsku.jpg)
+
 
 ### Opis
 
@@ -84,4 +84,4 @@ Zamknąć bazookę, ubić zawartość (z zamkniętą zakrętką), odkręcić i w
 Zwinąć nori, zmoczyć całą rolkę
 pokroić na 8
 
-Uzywanie bazooki: https://www.youtube.com/watch?v=_XNmQIq55_8 (dodać QR)
+Uzywanie bazooki: [https://www.youtube.com/watch?v=_XNmQIq55_8](https://www.youtube.com/watch?v=_XNmQIq55_8) (dodać QR)

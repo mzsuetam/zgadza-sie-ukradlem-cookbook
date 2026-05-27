@@ -1,6 +1,6 @@
-## Marynata jogurtowa do piersi z kurczaka na grilla
+## Marynata jogurtowa curry do piersi z kurczaka na grilla
 
-![Marynata jogurtowa do piersi z kurczaka na grilla](https://polki.pl/foto/4_3_LARGE/grillowana-piers-z-kurczaka-jak-ja-przygotowac-zeby-byla-jedrna-i-soczysta-2453083.jpg)
+![Marynata jogurtowa curry do piersi z kurczaka na grilla](img/marynata-jogurtowa-curry.png)
 
 ### Opis
 

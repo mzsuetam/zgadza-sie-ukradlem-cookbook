@@ -1,6 +1,6 @@
 ## Sałatka z selera naciowego
 
-![Sałatka z selera naciowego](img/sałatka-seler-naciowy.jpg)
+![Sałatka z selera naciowego](img/salatka-seler-naciowy.jpg)
 
 ### Składniki
 
